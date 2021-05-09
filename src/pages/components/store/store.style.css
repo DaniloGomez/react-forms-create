@@ -1,0 +1,11 @@
+.storepage{
+    width: 500px;
+    height: 550px;
+    background-color:black;
+    align-items: flex-start;
+    border: 1px solid gold;
+    margin-left: 20px;
+    color: white;
+    border-radius: 10px;
+    opacity: 0.7;
+}
