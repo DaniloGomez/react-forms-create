@@ -1,24 +1,23 @@
 import '../products/productsRow.style.css';
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
+import formTable from '../form/form.comp';
+
+const ProductsTable = (props) => {
+  
+    //console.log({props});
 
 
-class ProductsTable extends Component {
-  render() {
-      var heading = ['Name Product', 'City', 'Price'];
-      var body =
-          [['Egg', 'Manizales', '$ 350'],
-          ['Rice', 'Pereira', '$ 2300'],
-          ['Cookies', 'Bogotá', '$ 600'],
-          ['Cake', 'Manizales', '$ 8500'],
-          ['Cake', 'Manizales', '$ 8500'],
-          ];
+         /// const [products, setProducts] = useState(productsList);
+
       return (
-          <div >
-              <Table heading={heading} body={body} />
-          </div>
+        <div className="product-table">
+            
+        </div>
       );
   }
-}
+
+
+    /*
 
 class Table extends Component {
   render() {
@@ -48,6 +47,6 @@ class TableRow extends Component {
           </tr>
       )
   }
-}
+}*/
 
 export default ProductsTable;

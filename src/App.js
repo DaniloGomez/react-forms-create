@@ -1,7 +1,5 @@
 import './App.css';
 import First from './pages/firstpage';
-import React, { Component } from 'react';
-
 
 function App() {
   return (
@@ -10,6 +8,5 @@ function App() {
     </div>
   );
 }
-
 
 export default App;
