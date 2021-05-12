@@ -1,17 +1,33 @@
-import '../products/productsRow.style.css';
-import React, { Component, useState } from 'react';
-import formTable from '../form/form.comp';
+import '../products/productsTable.style.css';
+import React from 'react';
+import CategoryRow from '../productCategoryRow/productsCategoryRow.comp';
+import RowTable from '../productRow/productsRow.comp';
+
 
 const ProductsTable = (props) => {
   
-    //console.log({props});
-
+    console.log({props});
 
          /// const [products, setProducts] = useState(productsList);
 
       return (
         <div className="product-table">
             
+            {props.productsList.map((category, index)=>{
+                return(
+                    <React.Fragment key={category.id}>
+                        <CategoryRow categoryName={category.name}/>
+                        {category.products.map((product, indexProduct)=>{
+                            return(
+                                <RowTable
+                                    key={product.id}
+                                    product={product}
+                                />
+                            );
+                        })}
+                    </React.Fragment>
+                );
+            })}
         </div>
       );
   }

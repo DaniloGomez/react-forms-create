@@ -1,6 +1,6 @@
 import React from 'react';
 import '/Danilo/smart-store/src/pages/components/store/store.style.css'
-import ProductsPage from '../products/productsRow.comp';
+import ProductsPage from '../products/productsTable.comp';
 
 
 const StorePage = (props) => {
@@ -14,6 +14,5 @@ const StorePage = (props) => {
     </div>
   );
 }
-
 
 export default StorePage;

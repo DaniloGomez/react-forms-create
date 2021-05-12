@@ -1,5 +1,5 @@
-import '../products/products.style.css';
-import ProductsTable from '../products/productsRow.comp';
+import '../productsPage/products.style.css';
+import ProductsTable from '../productRow/productsRow.comp';
 
 
 const ProductsPage =(props) => {
