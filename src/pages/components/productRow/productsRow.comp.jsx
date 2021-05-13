@@ -6,10 +6,13 @@ import ProductsPage from '../productsPage/products.comp';
 const RowTable =(props) => {
   return (
     <div className="productRow-container">
-      {props.product.name} 
-      {props.product.City}
-      {props.product.Price}
       
+      {props.product.name}
+      <span> </span>
+      {props.product.City}
+      <span> </span>
+      {'$'}{props.product.Price}
+    
     </div>
   );
 }

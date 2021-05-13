@@ -8,29 +8,19 @@
 
 }
 
-table{
-    border: 2px solid turquoise;
-    padding: 10px;
-    width: 95%;
-}
-
 .form{
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.cities{
-    width: 0 auto;
-    margin-left: 60px;
-    margin-right: 60px;
-    text-align: center;
-}
 
 .product-table{
     border: 1px solid turquoise;
     margin-top: 10px;
     width: 0 auto;
     height: 300px;
+    margin-bottom: 5px;
+    justify-content: center;
 }
 

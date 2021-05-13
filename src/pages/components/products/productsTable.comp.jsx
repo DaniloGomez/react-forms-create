@@ -1,5 +1,5 @@
 import '../products/productsTable.style.css';
-import React from 'react';
+import React, { useState } from 'react';
 import CategoryRow from '../productCategoryRow/productsCategoryRow.comp';
 import RowTable from '../productRow/productsRow.comp';
 
@@ -12,22 +12,24 @@ const ProductsTable = (props) => {
 
       return (
         <div className="product-table">
+            <div>
+                {props.productsList.map((category, index)=>{
+                    return(
+                        <React.Fragment key={category.id}>
+                            <CategoryRow categoryName={category.name}/>
+                            {category.products.map((product, indexProduct)=>{
+                                return(
+                                    <RowTable
+                                        key={product.id}
+                                        product={product}
+                                    />
+                                );
+                            })}
+                        </React.Fragment>
+                    );
+                })}
+            </div>
             
-            {props.productsList.map((category, index)=>{
-                return(
-                    <React.Fragment key={category.id}>
-                        <CategoryRow categoryName={category.name}/>
-                        {category.products.map((product, indexProduct)=>{
-                            return(
-                                <RowTable
-                                    key={product.id}
-                                    product={product}
-                                />
-                            );
-                        })}
-                    </React.Fragment>
-                );
-            })}
         </div>
       );
   }
