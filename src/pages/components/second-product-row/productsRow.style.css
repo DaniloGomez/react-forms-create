@@ -13,14 +13,22 @@
     border-radius: 10px;
 }
 
-.categories{
-    border: 1px solid white;
-    margin-top: 5px;
-    border-radius: 4px;
-    width: 98%;
-    margin-left: 40px;    
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+.productRow-container{
+    margin-top: 10px;
+    width: 300px;
+    height: 20px;
+    border:2px solid goldenrod;
+    margin-left: 100px;
+    margin-bottom: 10px;
+}
+
+b{
+    color: red;
+}
+
+.male{
+    color: greenyellow;
+}
+.female{
     color: gold;
 }

@@ -1,8 +1,8 @@
-import '../productsPage/products.style.css';
+
 import ProductsTable from '../productRow/productsRow.comp';
 
 
-const ProductsPage =(props) => {
+const ShoesPage =(props) => {
   
 //console.log({props});
 
@@ -19,4 +19,4 @@ const ProductsPage =(props) => {
   );
 }
 
-export default ProductsPage;
+export default ShoesPage;

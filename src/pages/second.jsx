@@ -1,42 +1,42 @@
 import React, { useState } from 'react';
-import StorePage from './components/store/store.comp';
+import SecondStorePage from './components/computer-store/store.comp';
 
-function First() {
+function Second() {
   
   let productsList = 
       [
           {
             id:"c1",
-            name:'Almacen L',
+            name:'Almacen Lola',
             products:[
               {
                 id:"p1",
-                name:"Nike-Air",
-                City:"Manizales",
+                name:"River-Island",
+                gender:"Male",
                 Price:350,
               },
               {
                 id:"p2",
                 name:"Adidas-Haiwee",
-                City:"Pereira",
+                gender:"Male",
                 Price:2300,
               },
               {
                 id:"p4",
                 name:"NMD-R1",
-                City:"Manizales",
+                gender:"Female",
                 Price:8500,
               },
             ]
           },
           {
             id:"c2",
-            name:'Tienda DC',
+            name:'Rute',
             products:[
               {
                 id:"p3",
                 name: "DC-Trase",
-                City: "Bogotá",
+                gender: "Female",
                 Price: 600,
               },
             ]
@@ -50,8 +50,8 @@ function First() {
     //2. Tengo que hacer una nueva variable, y debo asignarla al set de la variable
   
     return (
-    <div className="second">
-      <StorePage productsList={products}
+    <div className="first">
+      <SecondStorePage productsList={products}
         onAddProduct={(productObj, categoryId)=>{
           //1. Crear arreglo nuevo de products
           const newProducts = [];
@@ -60,7 +60,7 @@ function First() {
               newProducts.push(products[i]);
             }
             else{
-              newProducts.push({...products[i], 
+              newProducts.push({...products[i],
               products:[...products[i].products, productObj]});
             }
           }
@@ -76,4 +76,4 @@ function First() {
 }
 
 
-export default First;
+export default Second;

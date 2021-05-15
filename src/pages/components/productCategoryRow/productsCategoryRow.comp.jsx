@@ -1,8 +1,7 @@
-import './productsCategoryRow.style.css';
-import React from 'react';
-import RowTable from '../productRow/productsRow.comp';
 
-const CategoryRow =(props) => {
+import React from 'react';
+
+const CategoryShoes =(props) => {
   return (
     <div className="categories">
       {props.categoryName}
@@ -11,4 +10,4 @@ const CategoryRow =(props) => {
 }
 
 
-export default CategoryRow;
+export default CategoryShoes;

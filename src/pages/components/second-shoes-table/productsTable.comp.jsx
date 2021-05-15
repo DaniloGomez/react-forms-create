@@ -1,25 +1,25 @@
-import '../products/productsTable.style.css';
+import '../second-shoes-table/productsTable.style.css';
 import React, { useState } from 'react';
-import CategoryShoes from '../productCategoryRow/productsCategoryRow.comp';
-import RowShoes from '../productRow/productsRow.comp';
+import SecondCategoryShoes from '../second-category-shoes/productsCategoryRow.comp';
+import SecondRowShoes from '../second-product-row/productsRow.comp';
 
 
-const ShoesTable = (props) => {
+const SecondShoesTable = (props) => {
   
     console.log({props});
 
          /// const [products, setProducts] = useState(productsList);
 
       return (
-        <div className="product-table">
+        <div className="second-product-table">
             <div>
                 {props.productsList.map((category, index)=>{
                     return(
                         <React.Fragment key={category.id}>
-                            <CategoryShoes categoryName={category.name}/>
+                            <SecondCategoryShoes categoryName={category.name}/>
                             {category.products.map((product, indexProduct)=>{
                                 return(
-                                    <RowShoes
+                                    <SecondRowShoes
                                         key={product.id}
                                         product={product}
                                     />
@@ -35,4 +35,4 @@ const ShoesTable = (props) => {
   }
 
 
-export default ShoesTable;
+export default SecondShoesTable;

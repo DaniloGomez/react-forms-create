@@ -1,7 +1,9 @@
 import './productsRow.style.css';
+import ShoesTable from '../products/productsTable.comp';
 import React, { Component, useState } from 'react';
+import ShoesPage from '../productsPage/products.comp';
 
-const RowShoes =(props) => {
+const SecondRowShoes =(props) => {
   return (
     <div className="productRow-container">
       
@@ -14,9 +16,13 @@ const RowShoes =(props) => {
       }
       <span> </span>
       {
-        props.product.City != ""
+        props.product.gender != "" && props.product.gender === "Male"
         ?
-        <span> {props.product.City} </span>
+        <span className="male"> {props.product.gender} </span>
+        :
+        props.product.gender === "Female"
+        ?
+        <span className="female">{props.product.gender}</span>
         :
         <span><b>Error!</b> </span>
       }
@@ -33,9 +39,8 @@ const RowShoes =(props) => {
         </span>
       }
       
-    
     </div>
   );
 }
 
-export default RowShoes;
+export default SecondRowShoes;

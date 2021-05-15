@@ -1,13 +1,13 @@
 import React, { useState }  from 'react';
-import '../store/store.style.css';
-import ProductsPage from '../products/productsTable.comp';
+import '../computer-store/store.style.css';
+import SecondShoesTable from '../second-shoes-table/productsTable.comp';
 
 
-const StorePage = (props) => {
+const SecondStorePage = (props) => {
   
   const [category, setCategory] = useState('c1');
   const [name, setName] = useState('');
-  const [city, setCity] = useState('');
+  const [gender, setGender] = useState('');
   const [price, setPrice] = useState(0);
 
   const addProduct = (event)=>{
@@ -16,7 +16,7 @@ const StorePage = (props) => {
     const newProduct={
       id:name,
       name: name,
-      City: city,
+      gender: gender,
       Price: Number(price),
     };
 
@@ -29,15 +29,15 @@ const StorePage = (props) => {
   }
 
   return (
-    <div className="storepage">
+    <div className="second-storepage">
       <div>
-        <h1>Shoes Store</h1>
-        <ProductsPage
+        <h1>Clothes Store</h1>
+        <SecondShoesTable
           productsList={props.productsList}
           onAddProduct={props.onAddProduct}
         />
       </div>
-      <div className="table-form">
+      <div className="clothes-form">
         <form>
           <table>
             <tbody>
@@ -55,15 +55,15 @@ const StorePage = (props) => {
                     setCategory(event.target.value);
                   }}
                   >
-                    <option value="c1">Almacen L</option>
-                    <option value="c2">Tienda DC</option>
+                    <option value="c1">Almacen Lola</option>
+                    <option value="c2">Rute</option>
                   </select>
                 </td>
               </tr>
 
-              <tr>Name</tr>
+              <tr>Reference</tr>
               <tr>
-                <input type="text" name="" id="" value={name} 
+                <input type="text" name="" id="" value={name}
                   onChange={(event)=>{
                     console.log(event.target.value);
                     setName(event.target.value);
@@ -71,13 +71,13 @@ const StorePage = (props) => {
                 />
               </tr>
 
-              <tr>City</tr>
+              <tr>Gender</tr>
               <tr>
-                <input type="text" name="" id="" 
-                value={city} 
+                <input type="text" 
+                value={gender}
                 onChange={(event)=>{
                   console.log(event.target.value);
-                  setCity(event.target.value);
+                  setGender(event.target.value);
                 }}
                 />
               </tr>
@@ -101,8 +101,6 @@ const StorePage = (props) => {
                 </button>
               </tr>
             </tbody>
-            
-            
           </table>
         </form>
       </div>
@@ -112,4 +110,4 @@ const StorePage = (props) => {
   );
 }
 
-export default StorePage;
+export default SecondStorePage;
